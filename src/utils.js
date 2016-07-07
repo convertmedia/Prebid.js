@@ -55,6 +55,13 @@ function _getUniqueIdentifierStr() {
 //generate a random string (to be used as a dynamic JSONP callback)
 exports.getUniqueIdentifierStr = _getUniqueIdentifierStr;
 
+// generate a random integer to identify an auction
+exports.generateAuctionId = function() {
+  // TODO: this should be a 64-bit number, but JavaScript has
+  // a maximum safe integer value of 2^53 - 1
+  return Math.floor(Math.random() * Math.pow(2, 53)).toString();
+};
+
 exports.getBidIdParamater = function (key, paramsObj) {
   if (paramsObj && paramsObj[key]) {
     return paramsObj[key];

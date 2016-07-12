@@ -18,7 +18,6 @@ function firePixel(dast, extra) {
   evp.height = 1;
   evp.width = 1;
   evp.style.display = "none";
-  // evp.src = "http://convusmp.basebanner.com/st?cijs=0&ttype=5&pix=31589837&dast=" + dast + "&" + extra;
   evp.src = window.cmTag.preBid.CONST.PIXEL_URL + "&cijs=0&ttype=5&pix=31589837&dast=" + dast + "&" + extra;
   document.body.appendChild(evp);
 }
@@ -122,7 +121,6 @@ var CMHB__Adaptor = function CMAdaptor() {
     var ref = document.referrer ? document.referrer.split("//")[1] : window.location.hostname;
 
     // Build our base tag
-    // var bidder_js = "http://15.basebanner.com/BidRHanSer?";
     var bidder_js = window.cmTag.preBid.CONST.BID_URL + "?";
     bidder_js = utils.tryAppendQueryString(bidder_js, 'oid', 15);
 

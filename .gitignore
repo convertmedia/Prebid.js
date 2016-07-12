@@ -70,3 +70,4 @@ crashlytics-build.properties
 
 # TypeScript typings
 typings/
+src/cmPrebidtest.html
